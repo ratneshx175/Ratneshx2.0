@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --header-bg: #f8f9fa;
+  --text-color: #000000;
+  --bg-color: linear-gradient(180deg, var(--bg), #071022);
+  --bg2-color: linear-gradient(180deg, var(--bg), #071022);
+}
+
+.dark-mode {
+  --header-bg: #000000;
+  --text-color: #ffffff;
+  --bg-color: #071022;
+  --bg2-color: #071022;
+}
+
+section {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

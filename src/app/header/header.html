@@ -1,0 +1,20 @@
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+<header>
+  <div class="logo">RATNESHX.</div>
+  <button class="menu-toggle" (click)="menuActive = !menuActive">
+    &#9776;
+  </button>
+  <button class="toggle-mode" (click)="toggleDarkMode()">
+    <i [class]="darkMode ? 'bx bxs-sun' : 'bx bxs-moon'"></i>
+  </button>
+  <nav class="List">
+    <ul [class.active]="menuActive">
+      <li>
+        <a href="#hero" (click)="scrollToSection($event, 'hero')">Home</a>
+      </li>
+    </ul>
+  </nav>
+</header>
