@@ -1,0 +1,9 @@
+<section class="tools">
+  <h2 class="section-title">Tools & Technologies</h2>
+  <div class="tools-grid">
+    <div class="tool-card" *ngFor="let tool of tools">
+      <img [src]="tool.img" [alt]="tool.name" />
+      <p>{{ tool.name }}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="slider">
+    <div
+      class="slide"
+      *ngFor="let exp of experiences; let i = index"
+      [class.active]="i === activeIndex"
+    >
+      <img [src]="exp.img" [alt]="exp.company" />
+      <div class="exp-details">
+        <h3>{{ exp.role }} - {{ exp.company }}</h3>
+        <p>{{ exp.duration }}</p>
+        <ul>
+          <li *ngFor="let point of exp.points">{{ point }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

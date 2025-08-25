@@ -1,0 +1,22 @@
+.education {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 78, 205, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: scale(1.05);
+}
