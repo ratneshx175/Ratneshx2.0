@@ -1,7 +1,8 @@
 <section class="projects">
   <h2 class="section-title">Projects</h2>
   <div class="project-grid">
-    <div class="project-card" *ngFor="let proj of projects">
+    @for (proj of projects; track proj.title) {
+    <div class="project-card">
       <img [src]="proj.img" [alt]="proj.title" />
       <h3>{{ proj.title }}</h3>
       <p>{{ proj.desc }}</p>
@@ -10,5 +11,6 @@
         <a [href]="proj.demo" target="_blank">Live Demo</a>
       </div>
     </div>
+    }
   </div>
 </section>
