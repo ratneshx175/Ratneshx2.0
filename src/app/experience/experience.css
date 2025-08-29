@@ -1,49 +1,121 @@
-.experience {
-  padding: 4rem 2rem;
-  text-align: center;
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center; /* force center */
+  background: linear-gradient(90deg, #ff4ecd, #4f46e5, #ff4ecd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
 }
 
-.slider {
-  position: relative;
-  overflow: hidden;
-  max-width: 900px;
-  margin: auto;
-}
-
-.slide {
-  display: none;
-  text-align: left;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 20px rgba(255, 78, 205, 0.3);
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
+.exp-list {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   align-items: center;
-  animation: fadeSlide 1.2s ease-in-out;
+  padding: 0 1rem;
+  overflow: visible; /* allow hover scale */
 }
 
-.slide img {
-  width: 150px;
-  border-radius: 1rem;
+.exp-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.8rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 20px rgba(255, 78, 205, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
 }
 
-.exp-details h3 {
-  font-size: 1.5rem;
-  color: #ff4ecd;
+.exp-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 78, 205, 0.6);
+  z-index: 10;
 }
 
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
+.exp-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.4rem;
+  box-shadow: 0 0 15px rgba(255, 78, 205, 0.4);
+}
+
+.exp-info {
+  text-align: left;
+}
+
+.exp-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.exp-info p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.exp-info ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* 📱 Phone view */
+@media (max-width: 600px) {
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+
+  .exp-logo {
+    margin-bottom: 0.8rem;
+    width: 80px;
+    height: 80px;
+  }
+
+  .exp-info {
+    text-align: center;
+  }
+
+  .exp-info ul {
+    padding-left: 1rem;
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+/* 💻 Larger screen view */
+@media (min-width: 768px) {
+  .exp-card {
+    max-width: 800px;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .exp-logo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .exp-info h3 {
+    font-size: 1.7rem;
+  }
+
+  .exp-info p {
+    font-size: 1.1rem;
+  }
+
+  .exp-info ul {
+    font-size: 1rem;
   }
 }

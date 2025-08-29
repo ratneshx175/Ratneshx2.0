@@ -10,13 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class Tools {
   tools = [
-    { name: '.NET', img: 'assets/tools/dotnet.png' },
-    { name: 'C#', img: 'assets/tools/csharp.png' },
-    { name: 'Angular', img: 'assets/tools/angular.png' },
-    { name: 'WPF', img: 'assets/tools/wpf.png' },
-    { name: 'ASP.NET Core', img: 'assets/tools/aspnet.png' },
-    { name: 'SQL Server', img: 'assets/tools/sql.png' },
-    { name: 'Azure', img: 'assets/tools/azure.png' },
-    { name: 'RabbitMQ', img: 'assets/tools/rabbitmq.png' },
+    { name: '.NET', img: 'assets/dotnet.png' },
+    { name: 'C#', img: 'assets/csharp.jpg' },
+    { name: 'Angular', img: 'assets/angular.png' },
+    { name: 'WPF', img: 'assets/wpf.png' },
+    { name: 'ASP.NET Core', img: 'assets/asp.jpg' },
+    { name: 'SQL Server', img: 'assets/sql.jpg' },
+    { name: 'Azure', img: 'assets/azure.png' },
+    { name: 'RabbitMQ', img: 'assets/rabbit.png' },
   ];
 }

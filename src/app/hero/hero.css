@@ -55,7 +55,7 @@ p {
   line-height: 1.8;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   max-width: 500px;
-  margin-top: 1rem;
+  margin-top: 3rem;
   animation: fadeUp 1.6s ease-out, float3D 6s ease-in-out infinite;
   transform-style: preserve-3d;
 }
@@ -142,5 +142,11 @@ ul li a:hover {
   }
   ul {
     justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .name {
+    margin-top: -100px; /* adjust this value as per your need */
   }
 }

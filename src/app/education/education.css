@@ -1,22 +1,96 @@
-.education {
-  padding: 4rem 2rem;
-  text-align: center;
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center; /* force center */
+  background: linear-gradient(90deg, #ff4ecd, #4f46e5, #ff4ecd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
 }
 
 .edu-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
+  padding: 0 1rem; /* keep some breathing space on sides */
 }
 
 .edu-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(255, 78, 205, 0.3);
   transition: transform 0.3s ease;
+  max-width: 500px; /* don't let it expand too wide */
+  width: 100%;
 }
 
 .edu-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 78, 205, 0.6);
+}
+
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.3rem;
+  box-shadow: 0 0 15px rgba(255, 78, 205, 0.4);
+}
+
+.edu-info {
+  text-align: left;
+}
+
+.edu-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-color);
+}
+
+.edu-info p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .edu-card {
+    flex-direction: column; /* stack logo on top in phone */
+    text-align: center;
+  }
+
+  .edu-logo {
+    margin-bottom: 0.8rem;
+  }
+
+  .edu-info {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .edu-card {
+    max-width: 800px; /* wider card */
+    padding: 2.5rem; /* more breathing space */
+    gap: 2rem; /* more gap between logo & text */
+  }
+
+  .edu-logo {
+    width: 120px; /* bigger logo */
+    height: 120px;
+  }
+
+  .edu-info h3 {
+    font-size: 1.6rem; /* larger heading */
+  }
+
+  .edu-info p {
+    font-size: 1.1rem;
+  }
 }

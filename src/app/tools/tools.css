@@ -6,6 +6,7 @@
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center; /* force center */
   background: linear-gradient(90deg, #ff4ecd, #4f46e5, #ff4ecd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

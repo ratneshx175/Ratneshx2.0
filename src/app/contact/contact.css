@@ -18,8 +18,8 @@
   border: none;
   border-radius: 0.8rem;
   outline: none;
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  background: var(--Contact-bg-color);
+  color: var(--Contact-color);
 }
 
 .contact-form button {
