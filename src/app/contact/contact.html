@@ -1,9 +1,13 @@
 <section class="contact">
   <h2 class="section-title">Contact Me</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message"></textarea>
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/xovnjgpo"
+    method="POST"
+  >
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message"></textarea>
     <button type="submit">Send</button>
   </form>
 </section>

@@ -9,6 +9,7 @@ import { Education } from './education/education';
 import { Projects } from './projects/projects';
 import { Contact } from './contact/contact';
 import { Footer } from './footer/footer';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',

@@ -73,7 +73,7 @@ button:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    margin-top: -2%;
+    margin-top: 0;
     margin-right: -6%;
   }
   .List {
