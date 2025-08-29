@@ -1,47 +1,39 @@
-/* Styles for the header */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--text-color);
+  position: relative;
+  z-index: 1000;
 }
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Logo */
 .logo {
   font-size: 1.5rem;
-  font: bold;
-}
-
-.logo {
+  font-weight: bold;
   background: linear-gradient(90deg, #ff4ecd, #4f46e5, #ff4ecd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-nav {
-  position: relative;
-}
-
+/* Navigation */
 ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin-right: 30px;
 }
-
-ul.active {
-  display: block;
-}
-
 li {
   display: inline;
 }
-
-.List {
-  display: flex;
-  right: 3%;
-}
-
 a,
 button {
   color: var(--text-color);
@@ -50,78 +42,74 @@ button {
   border: none;
   cursor: pointer;
 }
-
+a:hover,
 button:hover {
-  color: #810ca8;
+  color: #ff4ecd;
 }
 
-a:hover {
-  color: #810ca8;
-}
-
+/* Dark/Light toggle */
 .toggle-mode {
   font-size: 1.5rem;
   position: absolute;
-  right: 1%;
+  right: 1rem; /* pushes to extreme right */
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
 }
 
+/* Mobile menu button */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--text-color); /* ensures visible in both modes */
+}
+.menu-toggle:hover {
+  color: #ff4ecd;
 }
 
-/* Media query for mobile devices */
+/* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
     margin-top: -2%;
+    margin-right: -6%;
   }
-
   .List {
     right: 0%;
   }
-
-  .nav {
-    display: inline;
-  }
   .toggle-mode {
     position: absolute;
-    right: 60px;
+    right: 60px; /* your original mobile placement */
+    top: auto;
+    transform: none;
     padding-top: 2%;
     font-size: 1.5rem;
   }
-
   ul {
     display: none;
     flex-direction: column;
     position: absolute;
     border-top: 1px solid var(--text-color);
     border-bottom-left-radius: 10%;
-    margin-right: 0px;
-    right: -16px;
-    background-color: #6d6b6b;
+    right: -7%;
+    background-color: var(--bg-color);
     padding: 1rem;
     width: 150px;
   }
-
   ul li {
     border-bottom: 1px solid #810ca8;
     padding: 5px 10px;
   }
-
   ul.active {
     display: flex;
   }
-
   .logo {
     font-size: 1.5rem;
     position: absolute;
     left: 15px;
   }
-
   header {
     display: flex;
     justify-content: space-around;

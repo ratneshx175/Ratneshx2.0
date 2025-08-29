@@ -1,7 +1,17 @@
-/* contact.component.css */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center; /* force center */
+  background: linear-gradient(90deg, #ff4ecd, #4f46e5, #ff4ecd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite linear;
+}
+
 .contact {
   padding: 4rem 2rem;
   text-align: center;
+  min-height: 50vh;
 }
 
 .contact-form {

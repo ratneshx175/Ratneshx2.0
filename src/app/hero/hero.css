@@ -134,6 +134,7 @@ ul li a:hover {
 /* Responsive */
 @media (max-width: 800px) {
   .about {
+    min-height: 90vh;
     flex-direction: column;
     text-align: center;
   }

@@ -9,7 +9,7 @@ body {
 :root {
   --header-bg: #f8f9fa;
   --text-color: #000000;
-  --bg-color: linear-gradient(180deg, var(--bg), #071022);
+  --bg-color: #fff;
   --bg2-color: linear-gradient(180deg, var(--bg), #071022);
   --Contact-bg-color: rgba(20, 20, 20, 0.05);
   --Contact-color: #000000;
